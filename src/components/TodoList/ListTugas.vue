@@ -265,9 +265,9 @@ export default {
             }
         },
         deleteChecked(){
-            this.finishedTodo.push(this.formTodo);
             for( var i=0 ; i<this.checked.length ; i++){
                 const index = this.todos.indexOf(this.checked[i]);
+                this.finishedTodo.push(this.checked[i]);
                 this.todos.splice(index, 1);
             }
             this.checked=[];
